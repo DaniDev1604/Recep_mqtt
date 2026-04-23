@@ -2,6 +2,7 @@ import streamlit as st
 import paho.mqtt.client as mqtt
 import json
 import time
+from PIL import Image
 
 # Configuración de la página
 st.set_page_config(
@@ -65,8 +66,12 @@ with st.sidebar:
                               help='Identificador único para este cliente')
 
 # Título
-st.title('📡 Lector de Sensor MQTT')
+st.title('Sistema domòtica')
 
+image = Image.open('Sistemas-de-seguridad-domotica-para-tu-hogar-2-1100x825')
+
+st.image(image,width=300)
+    
 # Información al inicio
 with st.expander('ℹ️ Información', expanded=False):
     st.markdown("""
